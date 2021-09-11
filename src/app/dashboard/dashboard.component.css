@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+mat-toolbar{
+    background-color:rgb(75, 144, 201) ;
+    color: rgb(255, 255, 255);
+}
+
+ul li {
+    list-style: none;
+}
+.card_one{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.5%;
+    border-radius: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+ .field{
+    padding: 2.5% ;
+}
+
+.card_two{
+    margin: 0.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    border-radius: 1;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.card_two mat-label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+.card_three{
+    margin: 0.5%;
+    border-radius: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+
+.gauge{
+    justify-content: space-evenly;
+    display: flex;
+}
+.card_four{
+    width: 46.8%;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+
+.card_five{
+    width: 46.8%;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+
+.graph{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

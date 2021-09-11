@@ -1,0 +1,168 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+
+        <span>LOGO</span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" >
+            <ul fxLayout="row" fxLayoutGap="10px">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>refresh</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>alarm</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card class="card_one">
+
+   
+    <mat-label class="field" >FLOOR:
+    <mat-form-field appearance="fill">
+        <mat-label>Floor</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option>None</mat-option>
+          <mat-option value="option1">1</mat-option>
+          <mat-option value="option2">2</mat-option>
+          <mat-option value="option3">3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-label>
+
+
+      <mat-label class="field" >SECTION:
+      <mat-form-field appearance="fill">
+          <mat-label>Section</mat-label>
+          <mat-select [(value)]="Section">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Lab1</mat-option>
+            <mat-option value="option2">Lab2</mat-option>
+            <mat-option value="option3">Lab3</mat-option>
+          </mat-select>
+        </mat-form-field>
+    </mat-label>
+
+        <mat-label class="field">VIEW:
+        <mat-form-field appearance="fill">
+            <mat-label>View</mat-label>
+            <mat-select [(value)]="View">
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Individual</mat-option>
+              <mat-option value="option2">Combine</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-label>
+
+          <mat-label class="field">METER:
+          <mat-form-field appearance="fill">
+              <mat-label>Meter</mat-label>
+              <mat-select [(value)]="Meter">
+                <mat-option>None</mat-option>
+                <mat-option value="Meter1">Meter 1</mat-option>
+                <mat-option value="Meter2">Meter 2</mat-option>
+                <mat-option value="Meter3">Meter 3</mat-option>
+                <mat-option value="Meter4">Meter 4</mat-option>
+                <mat-option value="Meter4">Meter 5</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </mat-label>
+        </mat-card>
+
+        <mat-card  class="card_two">
+            <mat-label>ENERGY: <span style="color: red;">123</span> </mat-label>
+            <mat-label>LAST UPDATED: <span style="color: red;">123</span></mat-label>
+            <mat-label>NEXT HOUR PREDICTED ENERGY: <span style="color: red;">123</span></mat-label>
+        </mat-card>
+
+        <mat-card class="card_three" >
+            <span style="float: left;">KEY PARAMETERS</span>
+      
+<br>
+<div class="gauge">
+          <ngx-gauge [type]="gaugeType" 
+           [value]="VoltageValue" 
+           [label]="Voltage"  
+           [size]="120"
+           [max]="250">
+           <!-- <ngx-gauge-value>
+        </ngx-gauge-value> -->
+        </ngx-gauge>
+
+           <ngx-gauge [type]="gaugeType" 
+           [value]="CurrentValue" 
+           [label]="Current"  
+           [size]="120"
+           [max]="50"
+           >
+        
+        </ngx-gauge>
+
+           <ngx-gauge [type]="gaugeType" 
+           [value]="PowerValue" 
+           [label]="Power"  
+           [size]="120"
+           [max]="200"
+           ></ngx-gauge>
+
+           <ngx-gauge [type]="gaugeType" 
+           [value]="FactorValue" 
+           [label]="PowerFactor"  
+           [size]="120"
+           [max]="100"
+           ></ngx-gauge>
+
+           <ngx-gauge [type]="gaugeType" 
+           [value]="FrequencyValue" 
+           [label]="Frequency"  
+           [size]="120"
+           [max]="60">
+
+        </ngx-gauge>
+        </div>
+        </mat-card>
+<div class="graph" fxLayout="row" fxLayoutAlign="space-evenly">
+        <mat-card class="card_four">
+            <ngx-charts-line-chart
+            [view]="view"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [timeline]="timeline"
+            [results]="multi"
+            
+            >
+          </ngx-charts-line-chart>
+        </mat-card>
+        <mat-card class="card_five">
+            <ngx-charts-line-chart
+            [view]="view"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [timeline]="timeline"
+            [results]="powerFactor"
+            >
+          </ngx-charts-line-chart>
+        </mat-card>
+       
+    </div>
+
