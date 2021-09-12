@@ -1,6 +1,6 @@
 export var multi = [
     {
-      "name": "Germany",
+      "name": "KW",
       "series": [
         {
           "name": "12:30",

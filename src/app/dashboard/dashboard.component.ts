@@ -1,10 +1,7 @@
 import { Component, OnInit,AfterViewInit, ElementRef } from '@angular/core';
-import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
 import { __assign } from 'tslib';
 import { multi } from './power';
 import { powerFactor } from "./powerFactor";
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,6 +10,7 @@ import { powerFactor } from "./powerFactor";
 
 
 export class DashboardComponent implements OnInit , AfterViewInit{
+  
   selected = 'option1';
   Meter='Meter1'
   View = 'option1'
@@ -51,13 +49,6 @@ showYAxisLabel: boolean = true;
 showXAxisLabel: boolean = true;
 timeline: boolean = false;
 
-// power Factor
-
-
-
-
-
-
 
   constructor(private elementRef: ElementRef) { 
 
@@ -80,12 +71,13 @@ timeline: boolean = false;
   max!:any;
 
    randomNumber() {
-  
-      // return Math.random() *(10 - 20) +1;
 
-      setTimeout(() => {
-        return    this.CurrentValue=((Math.random()*1))
-        }, 2000);
+// return Math.random() *(10 - 20) +1;
+// return    this.CurrentValue=((Math.random()*1))
+
+      // setTimeout(() => {
+      //       this.CurrentValue=((Math.random()*1))
+      //   }, 2000);
   }
 
 

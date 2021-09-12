@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 mat-toolbar{
     background-color:rgb(75, 144, 201) ;
     color: rgb(255, 255, 255);
@@ -35,34 +34,63 @@ ul li {
     font-size: 1rem;
 }
 .card_three{
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
     margin: 0.5%;
     border-radius: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
+ngx-gauge{
+    margin-left:9% ;
+
+}
 
 
-.gauge{
+.container{
+    width: 100%;
     justify-content: space-evenly;
     display: flex;
-}
-.card_four{
-    width: 46.8%;
-    justify-content: center;
-    align-items: center;
-    display: flex
-}
-
-.card_five{
-    width: 46.8%;
-    justify-content: center;
-    align-items: center;
-    display: flex
-}
-
-.graph{
-    width: 100%;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: row;
 }
+.left_half{
+    float: left;
+    width: 49%;
+    margin-left: .5%;
+}
+.card_four{
+    width: 93%;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.right_half{
+    float: right;
+    width: 50%;
+}
+.card_five{
+    width: 94%;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+@media only screen  and (max-width:786px){
+    .container{
+        flex-direction: column;
+        width: 100%;
+        }
+       .card_four{
+        width: 100;
+       }
+       .right_half{
+           width: 100%;
+           margin-right: .5%;
+       }
+       .left_half{
+           width: 100%;
+           margin-right: .5%;
+       }
+    }

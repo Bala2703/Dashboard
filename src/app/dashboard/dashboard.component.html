@@ -1,3 +1,4 @@
+
 <mat-toolbar>
     <mat-toolbar-row>
         <button mat-icon-button>
@@ -137,7 +138,8 @@
         </ngx-gauge>
         </div>
         </mat-card>
-<div class="graph" fxLayout="row" fxLayoutAlign="space-evenly">
+        <div class="container">
+<div class="left_half">
         <mat-card class="card_four">
             <ngx-charts-line-chart
             [view]="view"
@@ -151,6 +153,8 @@
             >
           </ngx-charts-line-chart>
         </mat-card>
+      </div>
+      <div class="right_half">
         <mat-card class="card_five">
             <ngx-charts-line-chart
             [view]="view"
@@ -163,6 +167,14 @@
             >
           </ngx-charts-line-chart>
         </mat-card>
-       
+      </div>
     </div>
+ 
+    <dx-speed-dial-action
+    icon="message"
+    [index]="1"
+    >
+</dx-speed-dial-action>
+
+
 

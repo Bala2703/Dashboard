@@ -23,13 +23,19 @@ import { NgxFloatButtonModule } from 'ngx-float-button';
 import { ButtonModule } from "@progress/kendo-angular-buttons";
 
 
+import { DxButtonModule } from 'devextreme-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-
+import { 
+  DxDataGridModule,
+  DxDataGridComponent,
+  DxSpeedDialActionModule,
+  DxSelectBoxModule
+} from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -53,8 +59,11 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     ChartsModule,
     NgxChartsModule,
     NgxFloatButtonModule,
-    ButtonsModule
-    
+    ButtonsModule,
+    DxButtonModule,
+    DxDataGridModule,
+    DxSpeedDialActionModule,
+    DxSelectBoxModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
